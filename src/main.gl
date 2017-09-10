@@ -1,0 +1,26 @@
+precision mediump float;
+
+uniform sampler2D texture;
+uniform vec3 color;
+uniform mat4 transform;
+
+attribute vec4 position;
+attribute vec2 texCoord;
+
+export void Vertex() {
+  gl_Position = transform * vec4(position.xy, 0, 1);
+}
+
+export void Fragment() {
+  gl_FragColor = vec4(color.rgb, 1);
+}
+
+// will not be present on bundle.js
+void unused() {
+  float x = 3.;
+  vec2 t = color.xy / x;
+}
+
+export void ColorFragment() {
+  gl_FragColor = vec4(0, .5, 0, 1);
+}

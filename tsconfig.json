@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "importHelpers": true,
+        "module": "es6",
+        "moduleResolution": "node",
+        "lib": ["es2015", "dom"],
+        "outDir": "build",
+        "rootDirs": ["src", "build/gen-src"]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
